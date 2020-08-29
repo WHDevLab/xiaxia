@@ -1,0 +1,9 @@
+/* miniprogram/pages/home.wxss */
+.postbtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+}
