@@ -5,9 +5,15 @@
 		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"enhance": true,
+		"useCompilerModule": false
 	},
 	"appid": "wx6a0fda6f441dc8bb",
 	"projectname": "xiaxia",

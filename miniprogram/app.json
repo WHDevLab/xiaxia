@@ -1,26 +1,11 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/mine/mine"
+    "pages/home/home"
   ],
-  "tabBar": {
-    "color": "#e6e6e6",
-    "selectedColor": "#3dc2d5",
-    "backgroundColor": "#ffffff",
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "iconPath": "images/home_n.png",
-        "selectedIconPath":"images/home_h.png",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/mine/mine",
-        "iconPath": "images/geren_n.png",
-        "selectedIconPath":"images/geren_h.png",
-        "text": "个人"
-      }
-    ]
+  "permission":{
+    "scope.userLocation":{
+      "desc":"访问您的本地天气"
+    }
   },
   "window": {
     "backgroundColor": "#F6F6F6",

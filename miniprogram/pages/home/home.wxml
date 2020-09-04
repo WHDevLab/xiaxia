@@ -1,4 +1,8 @@
 <!--miniprogram/pages/home.wxml-->
 <view class="container">
-    <image class="postbtn" src="../../images/jiahao.png"></image>
+    <view class="mainWrapper">
+        <view class="a">北京市</view>
+        <view class="b">晴</view>
+        <view class="c">36</view>
+    </view>
 </view>
