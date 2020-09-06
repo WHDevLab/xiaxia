@@ -1,8 +1,8 @@
 <!--miniprogram/pages/home.wxml-->
 <view class="container">
     <view class="mainWrapper">
-        <view class="a">北京市</view>
-        <view class="b">晴</view>
-        <view class="c">36</view>
+        <view class="a">{{name}}</view>
+        <view class="b">{{text}}</view>
+        <view class="c">{{temperature}}</view>
     </view>
 </view>

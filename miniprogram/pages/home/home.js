@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    name:"",
+    temperature:"",
+    text:""
 
   },
 
@@ -12,11 +15,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中...',
+    })
+    var self = this;
     wx.getLocation({
       type: 'wgs84',
       success (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
+        var latitude = res.latitude.toString()
+        var longitude = res.longitude.toString()
+
+        wx.cloud.callFunction({
+          name: "weather",
+          data:{"location":latitude+":"+longitude},
+          success(res) {
+            wx.hideLoading({
+              complete: (res) => {},
+            })
+            var result = JSON.parse(res.result)
+            var data = result.results[0];
+            var location = data.location;
+            var now = data.now
+            self.setData({
+              name:location.name,
+              temperature:now.temperature+"℃",
+              text:now.text
+            })
+          },
+          fail(err) {
+            wx.hideLoading({
+              complete: (res) => {},
+            })
+            console.log(err)
+          }
+        })
+
       },
       fail () {
 
