@@ -5,7 +5,7 @@
 小程序可用来查看天气的最核心内容
 
 ### 效果图
-
+![image](https://github.com/whdevlab/xiaxia/xg.png)
 
 ### 部署说明
 
