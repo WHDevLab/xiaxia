@@ -1,8 +1,19 @@
 <!--miniprogram/pages/home.wxml-->
-<view class="container">
-    <view class="mainWrapper">
-        <view class="a">{{name}}</view>
-        <view class="b">{{text}}</view>
-        <view class="c">{{temperature}}</view>
+<view class="container2">
+    <view class="skWrapper">
+        <view class="address">{{name}}</view>
+        <view class="weather">{{text}}</view>
+        <view class="temp">{{temperature}}</view>
+        <view class="time">{{time}}</view>
+        <scroll-view class="hourWrapper"  scroll-x="{{true}}" scroll-left="{{x}}" scroll-with-animation="{{true}}">
+            <block wx:for="{{hoursList}}" wx:key="item" wx:for-index="idx">
+                <view id="{{idx}}" class="item h-wea" bindtap="onItem">
+                    <view>{{item.hour}}时</view>
+                    <image class="weather_icon {{item.wea}}"></image>
+                    <view class="temp2">{{item.temp}}℃</view>
+                </view>
+            </block>
+        </scroll-view>
     </view>
+
 </view>

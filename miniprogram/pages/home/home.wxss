@@ -1,29 +1,492 @@
 /* miniprogram/pages/home.wxss */
 
-.postbtn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  opacity: 0.8;
+.hourWrapper {
+  margin-top: 50px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.time {
+  font-size: 15px;
+}
+.hourWrapper .item {
+  display:inline-block;
+  width: 80px;
 }
 
-.mainWrapper {
+.h-wea image {
+  height: 20px;
+  width: 20px;
+  transform: scale(2);
+}
+
+.temp2 {
+  margin-top: 10px;
+}
+.skWrapper {
   color: #666666;
   text-align: center;
   position: absolute;
-  top: 50%;
-  margin-top: -120px;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
 }
 
-.mainWrapper .b {
-  height: 100px;
-  font-size: 60px;
-  font-weight: bolder;
+
+.skWrapper .address {
+  font-size: 25px;
 }
 
-.mainWrapper .c ,.a {
-  font-size: 30px;
-  font-weight: bolder;
+.skWrapper .weather {
+  font-size: 20px;
+}
+
+.skWrapper .temp {
+  font-size: 40px;
+}
+
+.h-wea .weather_icon {
+  margin-top: 15px;
+  background: url("https://7376-sv-vurjh-1302905799.tcb.qcloud.la/weather_icon_b.png?sign=393cc509ce54b7cd016f05ac8d679bab&t=1600091070") no-repeat;
+  background-size:240px auto;
+}
+
+.h-wea .d0 {
+  background-position:0 0
+}
+
+.h-wea .d1 {
+  background-position:-20px 0
+}
+
+.h-wea .d2 {
+  background-position:-40px 0
+}
+
+.h-wea .d3 {
+  background-position:-60px 0
+}
+
+.h-wea .d4 {
+  background-position:-80px 0
+}
+
+.h-wea .d5 {
+  background-position:-100px 0
+}
+
+.h-wea .d6 {
+  background-position:-120px 0
+}
+
+.h-wea .d7 {
+  background-position:-140px 0
+}
+
+.h-wea .d8 {
+  background-position:-160px 0
+}
+
+.h-wea .d9 {
+  background-position:-180px 0
+}
+
+.h-wea .d00 {
+  background-position:0 0
+}
+
+.h-wea .d01 {
+  background-position:-20px 0
+}
+
+.h-wea .d02 {
+  background-position:-40px 0
+}
+
+.h-wea .d03 {
+  background-position:-60px 0
+}
+
+.h-wea .d04 {
+  background-position:-80px 0
+}
+
+.h-wea .d05 {
+  background-position:-100px 0
+}
+
+.h-wea .d06 {
+  background-position:-120px 0
+}
+
+.h-wea .d07 {
+  background-position:-140px 0
+}
+
+.h-wea .d08 {
+  background-position:-160px 0
+}
+
+.h-wea .d09 {
+  background-position:-180px 0
+}
+
+.h-wea .d10 {
+  background-position:-200px 0
+}
+
+.h-wea .d11 {
+  background-position:-220px 0
+}
+
+.h-wea .d12 {
+  background-position:0 -20px
+}
+
+.h-wea .d13 {
+  background-position:-20px -20px
+}
+
+.h-wea .d14 {
+  background-position:-40px -20px
+}
+
+.h-wea .d15 {
+  background-position:-60px -20px
+}
+
+.h-wea .d16 {
+  background-position:-80px -20px
+}
+
+.h-wea .d17 {
+  background-position:-100px -20px
+}
+
+.h-wea .d18 {
+  background-position:-120px -20px
+}
+
+.h-wea .d19 {
+  background-position:-140px -20px
+}
+
+.h-wea .d20 {
+  background-position:-160px -20px
+}
+
+.h-wea .d21 {
+  background-position:-180px -20px
+}
+
+.h-wea .d22 {
+  background-position:-200px -20px
+}
+
+.h-wea .d23 {
+  background-position:-220px -20px
+}
+
+.h-wea .d24 {
+  background-position:0 -40px
+}
+
+.h-wea .d25 {
+  background-position:-20px -40px
+}
+
+.h-wea .d26 {
+  background-position:-40px -40px
+}
+
+.h-wea .d27 {
+  background-position:-60px -40px
+}
+
+.h-wea .d28 {
+  background-position:-80px -40px
+}
+
+.h-wea .d29 {
+  background-position:-100px -40px
+}
+
+.h-wea .d30 {
+  background-position:-120px -40px
+}
+
+.h-wea .d31 {
+  background-position:-140px -40px
+}
+
+.h-wea .d53 {
+  background-position:-160px -40px
+}
+
+.h-wea .d99 {
+  background-position:-180px -40px
+}
+
+.h-wea .d32 {
+  background-position:-200px -40px
+}
+
+.h-wea .d49 {
+  background-position:-220px -40px
+}
+
+.h-wea .d54 {
+  background-position:0 -60px
+}
+
+.h-wea .d55 {
+  background-position:-20px -60px
+}
+
+.h-wea .d56 {
+  background-position:-40px -60px
+}
+
+.h-wea .d57 {
+  background-position:-60px -20px
+}
+
+.h-wea .d58 {
+  background-position:-80px -40px
+}
+
+.h-wea .d301 {
+  background-position:-100px -60px
+}
+
+.h-wea .d302 {
+  background-position:-120px -80px
+}
+
+.h-wea .d97 {
+  background-position:-100px -60px
+}
+
+.h-wea .d98 {
+  background-position:-120px -60px
+}
+
+.h-wea .n0 {
+  background-position:-140px -60px
+}
+
+.h-wea .n1 {
+  background-position:-160px -60px
+}
+
+.h-wea .n2 {
+  background-position:-60px 0
+}
+
+.h-wea .n3 {
+  background-position:-180px -60px
+}
+
+.h-wea .n4 {
+  background-position:-80px 0
+}
+
+.h-wea .n5 {
+  background-position:-100px 0
+}
+
+.h-wea .n6 {
+  background-position:-120px 0
+}
+
+.h-wea .n7 {
+  background-position:-140px 0
+}
+
+.h-wea .n8 {
+  background-position:-160px 0
+}
+
+.h-wea .n9 {
+  background-position:-180px 0
+}
+
+.h-wea .n00 {
+  background-position:-140px -60px
+}
+
+.h-wea .n01 {
+  background-position:-160px -60px
+}
+
+.h-wea .n02 {
+  background-position:-60px 0
+}
+
+.h-wea .n03 {
+  background-position:-180px -60px
+}
+
+.h-wea .n04 {
+  background-position:-80px 0
+}
+
+.h-wea .n05 {
+  background-position:-100px 0
+}
+
+.h-wea .n06 {
+  background-position:-120px 0
+}
+
+.h-wea .n07 {
+  background-position:-140px 0
+}
+
+.h-wea .n08 {
+  background-position:-160px 0
+}
+
+.h-wea .n09 {
+  background-position:-180px 0
+}
+
+.h-wea .n10 {
+  background-position:-200px 0
+}
+
+.h-wea .n11 {
+  background-position:-220px 0
+}
+
+.h-wea .n12 {
+  background-position:0 -20px
+}
+
+.h-wea .n13 {
+  background-position:-20px -20px
+}
+
+.h-wea .n14 {
+  background-position:-40px -20px
+}
+
+.h-wea .n15 {
+  background-position:-60px -20px
+}
+
+.h-wea .n16 {
+  background-position:-80px -20px
+}
+
+.h-wea .n17 {
+  background-position:-100px -20px
+}
+
+.h-wea .n18 {
+  background-position:-120px -20px
+}
+
+.h-wea .n19 {
+  background-position:-140px -20px
+}
+
+.h-wea .n20 {
+  background-position:-160px -20px
+}
+
+.h-wea .n21 {
+  background-position:-180px -20px
+}
+
+.h-wea .n22 {
+  background-position:-200px -20px
+}
+
+.h-wea .n23 {
+  background-position:-220px -20px
+}
+
+.h-wea .n24 {
+  background-position:0 -40px
+}
+
+.h-wea .n25 {
+  background-position:-20px -40px
+}
+
+.h-wea .n26 {
+  background-position:-40px -40px
+}
+
+.h-wea .n27 {
+  background-position:-60px -40px
+}
+
+.h-wea .n28 {
+  background-position:-80px -40px
+}
+
+.h-wea .n29 {
+  background-position:-100px -40px
+}
+
+.h-wea .n30 {
+  background-position:-120px -40px
+}
+
+.h-wea .n31 {
+  background-position:-140px -40px
+}
+
+.h-wea .n53 {
+  background-position:-160px -40px
+}
+
+.h-wea .n99 {
+  background-position:-180px -40px
+}
+
+.h-wea .n32 {
+  background-position:-200px -40px
+}
+
+.h-wea .n49 {
+  background-position:-220px -40px
+}
+
+.h-wea .n54 {
+  background-position:0 -60px
+}
+
+.h-wea .n55 {
+  background-position:-20px -60px
+}
+
+.h-wea .n56 {
+  background-position:-40px -60px
+}
+
+.h-wea .n57 {
+  background-position:-60px -20px
+}
+
+.h-wea .n58 {
+  background-position:-80px -40px
+}
+
+.h-wea .n301 {
+  background-position:-100px -60px
+}
+
+.h-wea .n302 {
+  background-position:-120px -60px
+}
+
+.h-wea .n97 {
+  background-position:-100px -60px
+}
+
+.h-wea .n98 {
+  background-position:-120px -60px
 }
