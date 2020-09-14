@@ -7,7 +7,9 @@ Page({
   data: {
     name:"",
     temperature:"",
-    text:""
+    text:"",
+    time:"",
+    hoursList:[]
 
   },
 
@@ -16,6 +18,7 @@ Page({
    */
   onLoad: function (options) {
     this.refreshWeather()
+
   },
   onShow: function () {
     this.refreshWeather()
@@ -30,22 +33,20 @@ Page({
       success (res) {
         var latitude = res.latitude.toString()
         var longitude = res.longitude.toString()
-
         wx.cloud.callFunction({
           name: "weather",
-          data:{"location":latitude+":"+longitude},
+          data:{"lat":latitude,"lon":longitude},
           success(res) {
             wx.hideLoading({
               complete: (res) => {},
             })
             var result = JSON.parse(res.result)
-            var data = result.results[0];
-            var location = data.location;
-            var now = data.now
             self.setData({
-              name:location.name,
-              temperature:now.temperature+"℃",
-              text:now.text
+              hoursList:result.data.hours,
+              name: result.data.sk.address,
+              temperature: result.data.sk.temp+"℃",
+              text:result.data.sk.weather,
+              time:"数据更新时间:"+result.data.sk.updatetime
             })
           },
           fail(err) {
