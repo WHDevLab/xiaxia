@@ -9,7 +9,8 @@ Page({
     temperature:"",
     text:"",
     time:"",
-    hoursList:[]
+    hoursList:[],
+    days:[]
 
   },
 
@@ -18,14 +19,27 @@ Page({
    */
   onLoad: function (options) {
     this.refreshWeather()
+    wx.request({
+      url: 'https://api.breaker.club/index',
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
 
   },
   onShow: function () {
     this.refreshWeather()
   },
+  onRefresh: function () {
+    this.refreshWeather()
+  },
   refreshWeather: function (){
     wx.showLoading({
       title: '加载中...',
+      mask:true
     })
     var self = this;
     wx.getLocation({
@@ -33,23 +47,31 @@ Page({
       success (res) {
         var latitude = res.latitude.toString()
         var longitude = res.longitude.toString()
+
         wx.cloud.callFunction({
           name: "weather",
           data:{"lat":latitude,"lon":longitude},
           success(res) {
+            console.log(res)
             wx.hideLoading({
               complete: (res) => {},
             })
+            wx.showToast({
+              title: '已更新',
+            })
             var result = JSON.parse(res.result)
+            console.log(result)
             self.setData({
               hoursList:result.data.hours,
               name: result.data.sk.address,
               temperature: result.data.sk.temp+"℃",
               text:result.data.sk.weather,
-              time:"数据更新时间:"+result.data.sk.updatetime
+              time:"数据更新时间:"+result.data.sk.updatetime,
+              days:result.data.days
             })
           },
           fail(err) {
+            console.log(err)
             wx.hideLoading({
               complete: (res) => {},
             })

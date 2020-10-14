@@ -1,23 +1,77 @@
 /* miniprogram/pages/home.wxss */
-
+.xxxx {
+  width: 96%;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 2%;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
 .hourWrapper {
-  margin-top: 50px;
-  width: 100%;
+  width: 96%;
   overflow: hidden;
   white-space: nowrap;
+
+}
+.title {
+  color: rgba(0, 38, 111, 1);
+  height: 40px;
+  line-height: 40px;
 }
 .time {
   font-size: 15px;
 }
 .hourWrapper .item {
   display:inline-block;
-  width: 80px;
+  width: 60px;
+
 }
+
+.day15text {
+  text-align: left;
+  padding-left: 15px;
+
+}
+
+.day15 .left, .day15 .center,.day15 .right {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+}
+
+.day15 .left {
+  text-align: left;
+}
+
+
+
+.center image {
+ width: 50%;
+ margin: 0 2px;
+}
+
+.day15 .item {
+  text-align: left;
+  height: 80px;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .h-wea image {
   height: 20px;
   width: 20px;
   transform: scale(2);
+}
+
+.center image {
+  transform: scale(1.2);
+}
+.center .img {
+  display: inline-block;
+  width: 50%;
 }
 
 .temp2 {
@@ -29,7 +83,6 @@
   position: absolute;
   text-align: center;
   width: 100%;
-  margin-top: 50px;
 }
 
 
@@ -43,6 +96,22 @@
 
 .skWrapper .temp {
   font-size: 40px;
+}
+
+.refresh {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+
+.refresh image {
+  width: 36px;
+  height: 36px;
 }
 
 .h-wea .weather_icon {

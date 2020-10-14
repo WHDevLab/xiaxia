@@ -5,7 +5,10 @@
         <view class="weather">{{text}}</view>
         <view class="temp">{{temperature}}</view>
         <view class="time">{{time}}</view>
-        <scroll-view class="hourWrapper"  scroll-x="{{true}}" scroll-left="{{x}}" scroll-with-animation="{{true}}">
+        <view class="xxxx">
+            <view class="day15text title">24小时预报</view>
+            <scroll-view class="hourWrapper"  scroll-x="{{true}}" scroll-left="{{x}}" scroll-with-animation="{{true}}">
+            
             <block wx:for="{{hoursList}}" wx:key="item" wx:for-index="idx">
                 <view id="{{idx}}" class="item h-wea" bindtap="onItem">
                     <view>{{item.hour}}时</view>
@@ -14,6 +17,27 @@
                 </view>
             </block>
         </scroll-view>
+        </view>
+        <view class="xxxx">
+            <view class="day15text title">15日天气预报</view>
+        <div class="day15">
+            <view wx:for="{{days}}" class="item">
+                <view class="left">
+                    <view>{{item.weak}}</view>
+                    <view>{{item.date}}</view>
+                </view>
+                <view class="center h-wea">
+                    <image class="weather_icon {{item.wea1}}"></image>
+                    <image class="weather_icon {{item.wea2}}"></image>
+                    <view>{{item.tq}}</view>
+                </view>
+                <view class="right">{{item.temp}}℃</view>
+            </view>
+        </div>
+        </view>
+        
     </view>
-
+    <view class="refresh" bindtap="onRefresh">
+        <image src="../../images/shuaxin.png"></image>
+    </view>
 </view>
